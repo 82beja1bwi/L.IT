@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SA_RechnerinfoController">
+	<children>
+      <BorderPane layoutX="-100.0" layoutY="-122.0" prefHeight="328.0" prefWidth="450.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <VBox>
+               <children>
+                  <HBox alignment="TOP_CENTER" spacing="5.0">
+                     <children>
+                        <Label text="Rechner" />
+                        <Label fx:id="lbl_SAI_Seriennummer" text="Label" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="TOP_CENTER" prefHeight="67.0" prefWidth="431.0">
+                     <children>
+                        <VBox prefHeight="100.0" prefWidth="226.0">
+                           <children>
+                              <HBox>
+                                 <children>
+                                    <Label text="Status:               " />
+                                    <Label fx:id="lbl_SAI_status" text="Label" />
+                                 </children>
+                              </HBox>
+                              <HBox>
+                                 <children>
+                                    <Label text="Lieferdatum:      " />
+                                    <Label fx:id="lbl_SAI_lieferdatum" text="Label" />
+                                 </children>
+                              </HBox>
+                              <HBox>
+                                 <children>
+                                    <Label text="Bearb.datum:     " />
+                                    <Label fx:id="lbl_SAI_bearbeitungsdatum" text="Label" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="100.0" prefWidth="223.0">
+                           <children>
+                              <HBox>
+                                 <children>
+                                    <Label text="Kunde:              " />
+                                    <Label fx:id="lbl_SAI_kunde" text="Label" />
+                                 </children>
+                              </HBox>
+                              <HBox />
+                              <HBox>
+                                 <children>
+                                    <Label text="KundenNr:        " />
+                                    <Label fx:id="lbl_SAI_kundenNr" text="Label" />
+                                 </children>
+                              </HBox>
+                              <HBox>
+                                 <children>
+                                    <Label text="EMail:                " />
+                                    <Label fx:id="lbl_SAI_kundenEMail" text="Label" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+               <BorderPane.margin>
+                  <Insets left="5.0" right="5.0" />
+               </BorderPane.margin>
+            </VBox>
+         </top>
+         <center>
+            <VBox spacing="40.0">
+               <children>
+                  <HBox alignment="TOP_CENTER">
+                     <children>
+                        <ComboBox fx:id="comboBox_SAI_Bearbeitungsstatus" prefWidth="150.0" promptText="Bearbeitungsstatus" />
+                     </children>
+                  </HBox>
+                  <RadioButton fx:id="rbtn_SAI_Hardware" mnemonicParsing="false" text="Hardware">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="dokumentation" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <HBox alignment="CENTER" prefHeight="20.0" prefWidth="200.0" spacing="5.0">
+                     <children>
+                        <TextField fx:id="txt_SAI_Einzelteilsuche" promptText="Einzelteilsuche" />
+                        <Label fx:id="lbl_SAI_SuchStatus" text="Status der Suche" />
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <RadioButton fx:id="rbtn_SAI_Software" mnemonicParsing="false" text="Software" toggleGroup="$dokumentation" />
+                  <RadioButton fx:id="rbtn_SAI_Kunde" mnemonicParsing="false" text="Kunde" toggleGroup="$dokumentation" />
+                  <HBox alignment="TOP_CENTER">
+                     <children>
+                        <Button mnemonicParsing="false" text="PDF Generieren" textAlignment="CENTER" />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+               <BorderPane.margin>
+                  <Insets left="5.0" />
+               </BorderPane.margin>
+            </VBox>
+         </center>
+         <right>
+            <ScrollBar orientation="VERTICAL" BorderPane.alignment="CENTER" />
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>
